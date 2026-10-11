@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Faisal's Classroom — SSC, HSC, Admission ও CSE শিক্ষার্থীদের জন্য বাংলায় সহজ, গোছানো অনলাইন ক্লাসরুম।">
+  <meta name="theme-color" content="#0d5a49">
+  <title>Faisal's Classroom — বুঝে শেখো, এগিয়ে যাও</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top" id="top">
+    <nav class="wrap nav" aria-label="Main">
+      <a href="#top" class="brand" aria-label="Faisal's Classroom home">
+        <span class="logo" aria-hidden="true">F</span>
+        <span class="brand-text">Faisal’s Classroom</span>
+      </a>
+      <div class="links" id="navLinks">
+        <a href="#courses">Courses</a>
+        <a href="#path">How it works</a>
+        <a href="#dashboard">My classroom</a>
+      </div>
+      <div class="nav-actions">
+        <a id="adminLink" class="btn line hidden" href="/admin">Admin panel</a>
+        <span id="userChip" class="user-chip hidden"></span>
+        <button id="loginBtn" class="btn quiet" type="button">Log in</button>
+        <button id="signupBtn" class="btn solid" type="button">Join free</button>
+        <button id="logoutBtn" class="btn quiet hidden" type="button">Log out</button>
+        <button id="menuBtn" class="menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="badge"><i class="dot" aria-hidden="true"></i>SSC · HSC · Admission · CSE</p>
+        <h1>পড়া হোক পরিষ্কার, প্রস্তুতি হোক নিশ্চিত।</h1>
+        <p class="lead">Concept বুঝে শেখো, নিয়মিত practice করো, আর নিজের progress নিজের চোখে দেখো। সব কিছু এক জায়গায়, বাংলায়।</p>
+        <div class="hero-cta">
+          <button id="heroStart" class="btn solid lg" type="button">Start learning</button>
+          <a href="#courses" class="btn line lg">Browse courses</a>
+        </div>
+        <dl class="facts" id="facts" aria-live="polite">
+          <div><dt>Courses</dt><dd id="factCourses">–</dd></div>
+          <div><dt>Learning hours</dt><dd id="factHours">–</dd></div>
+          <div><dt>Stages</dt><dd id="factStages">–</dd></div>
+        </dl>
+      </div>
+
+      <aside class="route" aria-label="Learning route">
+        <div class="route-head">
+          <span class="sun" aria-hidden="true"></span>
+          <div>
+            <strong>তোমার শেখার পথ</strong>
+            <small>Stage বেছে নিলে course filter হবে</small>
+          </div>
+        </div>
+        <ol class="stops" id="stops">
+          <li><button type="button" data-cat="SSC"><b>SSC</b><span>ICT ও academic foundation</span></button></li>
+          <li><button type="button" data-cat="HSC"><b>HSC</b><span>Programming basics, logic, database</span></button></li>
+          <li><button type="button" data-cat="Admission"><b>Admission</b><span>Engineering ও university prep</span></button></li>
+          <li><button type="button" data-cat="CSE"><b>CSE</b><span>DSA ও problem solving</span></button></li>
+        </ol>
+      </aside>
+    </section>
+
+    <section id="courses" class="block wrap">
+      <div class="block-head">
+        <h2>তোমার জন্য course</h2>
+        <p>Stage অনুযায়ী বেছে নাও। Enroll করলেই dashboard-এ progress track শুরু।</p>
+      </div>
+      <div class="chips" id="chips" role="tablist" aria-label="Filter courses"></div>
+      <div id="courseGrid" class="courses" aria-live="polite">
+        <div class="skel"></div><div class="skel"></div><div class="skel"></div>
+      </div>
+    </section>
+
+    <section id="path" class="block wrap">
+      <div class="block-head">
+        <h2>তিন ধাপে শেখা</h2>
+        <p>খুব সহজ নিয়ম: বোঝো, practice করো, মাপো।</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="n">1</span>
+          <h3>Concept বুঝে নাও</h3>
+          <p>বাংলা-friendly ব্যাখ্যা, গোছানো lesson flow আর exam-এ যা আসে সেই অংশে ফোকাস।</p>
+        </li>
+        <li>
+          <span class="n">2</span>
+          <h3>নিয়মিত practice</h3>
+          <p>MCQ, problem solving আর coding practice দিয়ে শেখা পাকা করো।</p>
+        </li>
+        <li>
+          <span class="n">3</span>
+          <h3>Progress দেখো</h3>
+          <p>কোন course-এ কতটুকু এগোলে, dashboard-এ এক নজরে দেখে নাও।</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="dashboard" class="block wrap">
+      <div class="block-head">
+        <h2>আমার classroom</h2>
+        <p id="dashSub">Log in করলে তোমার enrolled course এখানে দেখাবে।</p>
+      </div>
+      <div id="dashMessage" class="empty">
+        <strong>এখনো log in করোনি</strong>
+        <span>Account খুলে প্রথম course-এ enroll করো।</span>
+        <button id="emptyJoin" class="btn solid" type="button">Join free</button>
+      </div>
+      <div id="dashboardGrid" class="mine"></div>
+    </section>
+
+    <section class="wrap">
+      <div class="cta" id="ctaBand">
+        <div>
+          <h2>আজই প্রথম পাঠটা শুরু করো।</h2>
+          <p>Account বানাতে এক মিনিটও লাগে না।</p>
+        </div>
+        <button id="ctaJoin" class="btn light lg" type="button">Join free</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <div>
+      <strong>Faisal’s Classroom</strong>
+      <span>Learn. Practice. Grow.</span>
+    </div>
+    <small>© 2026 Faisal’s Classroom · Bangladesh</small>
+  </footer>
+
+  <div id="toasts" class="toasts" role="status" aria-live="polite"></div>
+
+  <dialog id="authDialog" aria-labelledby="authTitle">
+    <form id="authForm" class="auth" novalidate>
+      <button type="button" id="closeDialog" class="x" aria-label="Close">×</button>
+      <h2 id="authTitle">Join Faisal’s Classroom</h2>
+      <p id="authSub" class="sub">Free account খুলে course শুরু করো।</p>
+
+      <label id="nameWrap">Full name
+        <input id="nameInput" name="name" placeholder="তোমার নাম" autocomplete="name">
+      </label>
+      <label>Email
+        <input id="emailInput" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+      </label>
+      <label>Password
+        <span class="pw">
+          <input id="passwordInput" name="password" type="password" placeholder="Password" autocomplete="current-password" required>
+          <button type="button" id="pwToggle" class="show" aria-label="Show password">Show</button>
+        </span>
+      </label>
+      <small id="passwordHint" class="hint">কমপক্ষে ১০ অক্ষর, সাথে বড় হাতের, ছোট হাতের অক্ষর আর একটা সংখ্যা।</small>
+
+      <button class="btn solid lg full" type="submit" id="authSubmit">Create account</button>
+      <p id="authStatus" class="status" role="alert"></p>
+      <p class="switch"><span id="switchText">আগে থেকেই account আছে?</span> <button type="button" id="switchMode" class="link">Log in</button></p>
+    </form>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>

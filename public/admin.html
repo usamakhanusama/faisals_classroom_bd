@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#0f2a24">
+  <title>Admin · Faisal's Classroom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+  <section id="login" class="login">
+    <form id="loginForm" class="lcard" novalidate>
+      <a href="/" class="brand"><span class="logo" aria-hidden="true">F</span><span>Faisal’s Classroom</span></a>
+      <h1>Admin sign in</h1>
+      <p class="muted">শুধু authorized admin-দের জন্য।</p>
+      <label>Email
+        <input id="lEmail" type="email" autocomplete="username" required>
+      </label>
+      <label>Password
+        <span class="pw">
+          <input id="lPass" type="password" autocomplete="current-password" required>
+          <button type="button" id="lShow" class="show" aria-label="Show password">Show</button>
+        </span>
+      </label>
+      <button id="lGo" class="btn solid full" type="submit">Sign in</button>
+      <p id="lErr" class="err" role="alert"></p>
+      <a href="/" class="back">← Back to website</a>
+    </form>
+  </section>
+
+  <div id="app" class="app hidden">
+    <aside class="side">
+      <a href="/" class="brand"><span class="logo" aria-hidden="true">F</span><span>Admin</span></a>
+      <nav id="tabs" class="tabs" aria-label="Admin sections">
+        <button type="button" data-v="overview" class="on">Overview</button>
+        <button type="button" data-v="courses">Courses</button>
+        <button type="button" data-v="users">Students</button>
+        <button type="button" data-v="enr">Enrollments</button>
+        <button type="button" data-v="log">Activity</button>
+      </nav>
+      <div class="me">
+        <span id="meName" class="me-n"></span>
+        <a href="/" class="mini">View website</a>
+        <button id="outBtn" type="button" class="mini">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="bar">
+        <h1 id="vTitle">Overview</h1>
+        <div id="vAct" class="act"></div>
+      </header>
+      <div id="view"></div>
+    </main>
+  </div>
+
+  <dialog id="dForm"><form id="fForm" class="dcard" novalidate></form></dialog>
+  <dialog id="dAsk"><div class="dcard">
+    <h2 id="aT"></h2><p id="aM" class="muted"></p>
+    <div class="row"><button id="aNo" type="button" class="btn line">Cancel</button><button id="aYes" type="button" class="btn danger">Confirm</button></div>
+  </div></dialog>
+  <div id="toasts" class="toasts" role="status" aria-live="polite"></div>
+  <script src="/admin.js"></script>
+</body>
+</html>
